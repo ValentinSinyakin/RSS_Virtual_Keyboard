@@ -175,3 +175,4 @@ colors_input.addEventListener('input',function() {
     }
     keyboard_lights.style.background = colors_input.value;
 })
+alert( "Прошу проверить в четверг,всё сделаю и доделаю.Спасибо" );
