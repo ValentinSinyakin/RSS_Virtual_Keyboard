@@ -15,20 +15,20 @@
             <div class="keyboard_lights"></div>
             <div class="keyboard_keys">
                 <div class="row">
-                    <div class="keys">(\)</div>
-                    <div class="keys">1</div>
-                    <div class="keys">2</div>
-                    <div class="keys">3</div>
-                    <div class="keys">4</div>
-                    <div class="keys">5</div>
-                    <div class="keys">6</div>
-                    <div class="keys">7</div>
-                    <div class="keys">8</div>
-                    <div class="keys">9</div>
-                    <div class="keys">0</div>
-                    <div class="keys">-</div>
-                    <div class="keys">=</div>
-                    <div class="keys backspace_key">Backspace</div>
+                    <div class="keys" data="96">~</div>
+                    <div class="keys" data="49">1</div>
+                    <div class="keys" data="50">2</div>
+                    <div class="keys" data="51">3</div>
+                    <div class="keys" data="52">4</div>
+                    <div class="keys" data="53">5</div>
+                    <div class="keys" data="54">6</div>
+                    <div class="keys" data="55">7</div>
+                    <div class="keys" data="56">8</div>
+                    <div class="keys" data="57">9</div>
+                    <div class="keys" data="48">0</div>
+                    <div class="keys" data="45">-</div>
+                    <div class="keys" data="61">=</div>
+                    <div class="keys backspace_key" data="8">Backspace</div>
                 </div>
                 <div class="row">
                     <div class="keys tab_key">Tab</div>
@@ -44,7 +44,7 @@
                     <div class="keys">P</div>
                     <div class="keys">{</div>
                     <div class="keys">}</div>
-                    <div class="keys slash_key">\</div>
+                    <div class="keys slash_key">&#8260;</div>
                 </div>
                 <div class="row">
                     <div class="keys caps_lock_key">Caps Lock</div>
@@ -180,10 +180,46 @@ colors_input.addEventListener('input',function() {
 keys.forEach(key => {
     key.onmousedown = () => key.classList.add('active');
     key.onmouseup = () => key.classList.remove('active');
+
 }) 
 
+const keyboard = [
+    96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 8, 9, 113, 119, 101, 114,
+    116, 121, 117, 105, 111, 112, 91, 93, 46, 20, 97, 115, 100, 102, 103, 104,
+    106, 107, 108, 59, 222, 92, 13, 16, 122, 120, 99, 118, 98, 110, 109, 44, 46,
+    47, 38, 16, 17, 17, 18, 32, 18, 37, 40, 39, 17,
+  ];
 
- 
+  const inputText = document.querySelector('.text');
+const cc = function (event) {
+  document
+    .querySelector(`.keys[data="${event.keyCode}"]`)
+    inputText.focus();
+};
+document.onkeypress = cc;
+document.onkeydown = cc;
+document.querySelectorAll('.keys').forEach((element) => {
+  element.onclick = function (event) {
+    document.querySelectorAll('.keys').forEach((element) => {
+      element.classList.remove('active');
+    });
+    this.classList.add('active');
+    inputText.value += element.textContent;
+  };
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 alert( "Прошу проверить в четверг,всё сделаю и доделаю.Спасибо" );
