@@ -107,7 +107,7 @@ let colors_input = document.querySelector('.colors_input');
 let keyboard_lights = document.querySelector('.keyboard_lights');
 let keyboard_wrapp = document.querySelector('.keyboard_wrapp');
 
-/* for(let i = 0; i < keys.length; i++) {
+for(let i = 0; i < keys.length; i++) {
     keys[i].setAttribute('keyname', keys[i].innerText);
     keys[i].setAttribute('lowerCaseName', keys[i].innerText.toLowerCase());
 }
@@ -175,15 +175,12 @@ colors_input.addEventListener('input',function() {
     }
     keyboard_lights.style.background = colors_input.value;
 })
- */
+
 
 keys.forEach(key => {
     key.onmousedown = () => key.classList.add('active');
     key.onmouseup = () => key.classList.remove('active');
-}) /* key.addEventListener('click', () => {
-    key.classList.add('active');
-  })) */
-
+}) 
 
 
  
