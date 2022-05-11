@@ -177,7 +177,7 @@ colors_input.addEventListener('input',function() {
 })
 
 
-keys.forEach(key => {
+ keys.forEach(key => {
     key.onmousedown = () => key.classList.add('active');
     key.onmouseup = () => key.classList.remove('active');
 
@@ -200,13 +200,16 @@ document.onkeypress = cc;
 document.onkeydown = cc;
 document.querySelectorAll('.keys').forEach((element) => {
   element.onclick = function (event) {
-    document.querySelectorAll('.keys').forEach((element) => {
-      element.classList.remove('active');
-    });
-    this.classList.add('active');
+    
     inputText.value += element.textContent;
   };
 });
+
+
+keys.forEach(key => {
+    key.onmousedown = () => key.classList.add('active');
+    key.onmouseup = () => key.classList.remove('active');
+}) 
 
 
 
