@@ -175,4 +175,18 @@ colors_input.addEventListener('input',function() {
     }
     keyboard_lights.style.background = colors_input.value;
 })
+
+
+keys.forEach(key => {
+    key.onmousedown = () => key.classList.add('active');
+    key.onmouseup = () => key.classList.remove('active');
+}) 
+
+
+ 
+
+
 alert( "Прошу проверить в четверг,всё сделаю и доделаю.Спасибо" );
+
+
+

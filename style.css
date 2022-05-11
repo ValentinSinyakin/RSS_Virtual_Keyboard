@@ -19,6 +19,7 @@ body {
     height: 100vh;
     flex-direction: column;
     margin: 0 10px;
+    user-select: none;
 }
 
 .keyboard_wrapp {
@@ -29,6 +30,7 @@ body {
     position: relative;
     overflow: hidden;
     order: 2;
+
 }
 
 .row {
