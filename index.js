@@ -211,6 +211,8 @@ keys.forEach(key => {
     key.onmouseup = () => key.classList.remove('active');
 }) 
 
+document.querySelector('.space_key ').textContent = ' ';
+
 
 
 
