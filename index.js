@@ -15,7 +15,7 @@
             <div class="keyboard_lights"></div>
             <div class="keyboard_keys">
                 <div class="row">
-                    <div class="keys">(\)</div>
+                    <div class="keys">~</div>
                     <div class="keys">1</div>
                     <div class="keys">2</div>
                     <div class="keys">3</div>
@@ -44,7 +44,7 @@
                     <div class="keys">P</div>
                     <div class="keys">{</div>
                     <div class="keys">}</div>
-                    <div class="keys slash_key">\</div>
+                    <div class="keys slash_key">&#8260;</div>
                 </div>
                 <div class="row">
                     <div class="keys caps_lock_key">Caps Lock</div>
