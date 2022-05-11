@@ -209,7 +209,6 @@ document.querySelectorAll('.keys').forEach((element) => {
 keys.forEach(key => {
     key.onmousedown = () => key.classList.add('active');
     key.onmouseup = () => key.classList.remove('active');
-
 }) 
 
 
