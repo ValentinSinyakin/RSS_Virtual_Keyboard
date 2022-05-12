@@ -15,7 +15,7 @@
             <div class="keyboard_lights"></div>
             <div class="keyboard_keys">
                 <div class="row">
-                    <div class="keys" data="96">~</div>
+                    <div class="keys Backquote" data="96">~</div>
                     <div class="keys" data="49">1</div>
                     <div class="keys" data="50">2</div>
                     <div class="keys" data="51">3</div>
@@ -106,6 +106,11 @@ let change_color = document.querySelector('.change_light_color');
 let colors_input = document.querySelector('.colors_input');
 let keyboard_lights = document.querySelector('.keyboard_lights');
 let keyboard_wrapp = document.querySelector('.keyboard_wrapp');
+let ctrl_left = document.querySelector('.ctrl_left');
+let win_key = document.querySelector('.win_key');
+let backquote = document.querySelector('.Backquote');
+let slash_key = document.querySelector('.slash_key');
+let ctrl_right = document.querySelector('.ctrl_right');
 
 for(let i = 0; i < keys.length; i++) {
     keys[i].setAttribute('keyname', keys[i].innerText);
@@ -129,6 +134,26 @@ window.addEventListener('keydown', function(e) {
         if(e.code == 'CapsLock') {
             caps_lock_key.classList.toggle('active');
         }
+        /* ------ */
+        if(e.code == 'ControlLeft') {
+            ctrl_left.classList.add('active');
+        }
+        if(e.code == 'MetaLeft') {
+            win_key.classList.add('active');
+        }
+    
+        if(e.code == 'Backquote') {
+            backquote.classList.add('active');
+        }
+        
+        if(e.code == 'Backslash') {
+            slash_key.classList.add('active');
+        }
+        
+        if(e.code == 'ControlRight') {
+            ctrl_right.classList.add('active');
+        }
+
     }
 })
 
@@ -150,9 +175,30 @@ window.addEventListener('keyup', function(e) {
             shift_left.classList.remove('active')
             shift_left.classList.remove('remove')
         }
+    
         setTimeout(()=> {
             keys[i].classList.remove('remove')
         },200)
+        if(e.code == 'ControlLeft') {
+            ctrl_left.classList.remove('active');
+            ctrl_left.classList.remove('remove')
+        }
+        if(e.code == 'MetaLeft') {
+            win_key.classList.remove('active');
+            win_key.classList.remove('remove')
+        }
+        if(e.code == 'Backquote') {
+            backquote.classList.remove('active');
+            backquote.classList.remove('remove')
+        }
+        if(e.code == 'Backslash') {
+            slash_key.classList.remove('active');
+            slash_key.classList.remove('remove')
+        }
+        if(e.code == 'ControlRight') {
+            ctrl_right.classList.remove('active');
+            ctrl_right.classList.remove('remove')
+        }
     }
 })
 
@@ -227,7 +273,7 @@ document.querySelector('.space_key ').textContent = ' ';
 
 
 
-alert( "Прошу проверить в четверг,всё сделаю и доделаю.Спасибо" );
+alert( "Прошу простить,что пришлось вам подождать.Попал в больницу и вышел только во вторник, ссылку на деплой задания делала моя деввушка.поэтому она ведёт main" );
 
 
 
