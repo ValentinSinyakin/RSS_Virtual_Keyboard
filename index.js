@@ -14,6 +14,7 @@
         <div class="keyboard_wrapp">
             <div class="keyboard_lights"></div>
             <div class="keyboard_keys">
+            <p>Windows 10</p>
                 <div class="row">
                     <div class="keys Backquote" data="96">~</div>
                     <div class="keys" data="49">1</div>
